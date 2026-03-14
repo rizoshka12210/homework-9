@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+}
+$primaryColor: (
+    primary: #F9F8FD,
+);
+$colors: red, green, blue, yellow, brown, gray, black, white, pink, purple,
+  orange, lightblue, lightgray, aqua;
+$fonts: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+$displays: flex, grid, inline, block, none;
+$positions: fixed, relative, absolute, sticky;
+$justifies: center, space-between, start, space-around, space-evenly, end;
+$items: start, center, end;
+$directions: row, column, column-reverse, row-reverse;
+$borders: none, solid, dotted, dashed, double;
+$buttons: (
+  primary: #35afbf,
+  secondary: #35bf35,
+  error: red,
+  warning: orange,
+);
+@each $c, $v in $primaryColor{
+   .bg-#{$c}{
+    background-color: $v;
+   }
+}
+@each $key, $value in $buttons {
+  .btn-#{$key} {
+    background-color: $value;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+}
+@for $i from 0 through 100 {
+  .w-#{$i} {
+    width: #{$i * 10}px;
+  }
+  .width-#{$i} {
+    width: $i * 1%;
+  }
+  .h-#{$i} {
+    height: #{$i * 10}px;
+  }
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  .my-#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+  .mx-#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  .py-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+
+  .text-#{$i} {
+    font-size: #{$i}px;
+  }
+
+  .gap-#{$i} {
+    gap: #{$i * 5}px;
+  }
+  .border-#{$i} {
+    border-width: #{$i}px;
+  }
+  .rounded-#{$i} {
+    border-radius: #{$i}px;
+  }
+
+  .t-#{$i} {
+    top: #{$i * 10}px;
+  }
+  .b-#{$i} {
+    bottom: #{$i * 10}px;
+  }
+  .l-#{$i} {
+    left: #{$i * 10}px;
+  }
+  .r-#{$i} {
+    right: #{$i * 10}px;
+  }
+  .z-#{$i}{
+    z-index: $i;
+  }
+  .-z-#{$i}{
+    z-index: $i * -1;
+  }
+}
+@each $color in $colors {
+  .text-#{$color} {
+    color: $color;
+  }
+  .bg-#{$color} {
+    background-color: $color;
+  }
+  .border-#{$color} {
+    border-color: $color;
+  }
+}
+@each $font in $fonts {
+  .font-#{$font} {
+    font-weight: #{$font};
+  }
+}
+@each $display in $displays {
+  .#{$display} {
+    display: $display;
+  }
+}
+@each $position in $positions {
+  .#{$position} {
+    position: $position;
+  }
+}
+@each $justiy in $justifies {
+  .justify-#{$justiy} {
+    justify-content: $justiy;
+  }
+}
+@each $item in $items {
+  .items-#{$item} {
+    align-items: $item;
+  }
+  .text-#{$item} {
+    text-align: $item;
+  }
+}
+@each $direction in $directions {
+  .flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+@each $border in $borders {
+  .border-#{$border} {
+    border-style: $border;
+  }
+}
+.text-primary {
+  color: #35afbf;
+}
+.max-w-1200 {
+  max-width: 1200px;
+}
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 500px) {
+  @for $i from 1 through 100 {
+    .m-w-#{$i} {
+      width: #{$i * 10}px;
+    }
+    .m-width-#{$i} {
+      width: $i * 1%;
+    }
+    .m-h-#{$i} {
+      height: #{$i * 10}px;
+    }
+    .m-m-#{$i} {
+      margin: #{$i}px;
+    }
+    .m-my-#{$i} {
+      margin-top: #{$i}px;
+      margin-bottom: #{$i}px;
+    }
+    .m-mx-#{$i} {
+      margin-left: #{$i}px;
+      margin-right: #{$i}px;
+    }
+    .m-mt-#{$i} {
+      margin-top: #{$i}px;
+    }
+    .m-mb-#{$i} {
+      margin-bottom: #{$i}px;
+    }
+    .m-ml-#{$i} {
+      margin-left: #{$i}px;
+    }
+    .m-mr-#{$i} {
+      margin-right: #{$i}px;
+    }
+    .m-p-#{$i} {
+      padding: #{$i}px;
+    }
+    .m-py-#{$i} {
+      padding-top: #{$i}px;
+      padding-bottom: #{$i}px;
+    }
+    .m-px-#{$i} {
+      padding-left: #{$i}px;
+      padding-right: #{$i}px;
+    }
+    .m-pt-#{$i} {
+      padding-top: #{$i}px;
+    }
+    .m-pb-#{$i} {
+      padding-bottom: #{$i}px;
+    }
+    .m-pl-#{$i} {
+      padding-left: #{$i}px;
+    }
+    .m-pr-#{$i} {
+      padding-right: #{$i}px;
+    }
+
+    .m-text-#{$i} {
+      font-size: #{$i}px;
+    }
+
+    .m-gap-#{$i} {
+      gap: #{$i * 5}px;
+    }
+    .m-border-#{$i} {
+      border-width: #{$i}px;
+    }
+    .m-rounded-#{$i} {
+      border-radius: #{$i}px;
+    }
+
+    .m-t-#{$i} {
+      top: #{$i * 10}px;
+    }
+    .m-b-#{$i} {
+      bottom: #{$i * 10}px;
+    }
+    .m-l-#{$i} {
+      left: #{$i * 10}px;
+    }
+    .m-r-#{$i} {
+      right: #{$i * 10}px;
+    }
+  }
+  @each $color in $colors {
+    .m-text-#{$color} {
+      color: $color;
+    }
+    .m-bg-#{$color} {
+      background-color: $color;
+    }
+    .m-border-#{$color} {
+      border-color: $color;
+    }
+  }
+  @each $font in $fonts {
+    .m-font-#{$font} {
+      font-weight: #{$font};
+    }
+  }
+  @each $display in $displays {
+    .m-#{$display} {
+      display: $display;
+    }
+  }
+  @each $position in $positions {
+    .m-#{$position} {
+      position: $position;
+    }
+  }
+  @each $justiy in $justifies {
+    .m-justify-#{$justiy} {
+      justify-content: $justiy;
+    }
+  }
+  @each $item in $items {
+    .m-items-#{$item} {
+      align-items: $item;
+    }
+    .m-text-#{$item} {
+      text-align: $item;
+    }
+  }
+  @each $direction in $directions {
+    .m-flex-#{$direction} {
+      flex-direction: $direction;
+    }
+  }
+}
