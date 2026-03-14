@@ -15,8 +15,8 @@
   color: white;
   border: none;
   padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 25px;
+  font-size: 14px;
 }
 
 .btn-secondary {
@@ -24,8 +24,8 @@
   color: white;
   border: none;
   padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 25px;
+  font-size: 14px;
 }
 
 .btn-error {
@@ -33,8 +33,8 @@
   color: white;
   border: none;
   padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 25px;
+  font-size: 14px;
 }
 
 .btn-warning {
@@ -42,8 +42,8 @@
   color: white;
   border: none;
   padding: 15px 30px;
-  border-radius: 10px;
-  font-size: 20px;
+  border-radius: 25px;
+  font-size: 14px;
 }
 
 .w-0 {
@@ -19824,4 +19824,7 @@
   .m-flex-row-reverse {
     flex-direction: row-reverse;
   }
+}
+.lg-bg {
+  background-image: linear-gradient(to right, #447C2A, #3DB444, #447C2A);
 }/*# sourceMappingURL=style.css.map */

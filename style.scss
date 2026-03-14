@@ -34,8 +34,8 @@ $buttons: (
     color: white;
     border: none;
     padding: 15px 30px;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 25px;
+    font-size: 14px;
   }
 }
 @for $i from 0 through 100 {
@@ -318,4 +318,8 @@ $buttons: (
       flex-direction: $direction;
     }
   }
+}
+
+.lg-bg{
+  background-image: linear-gradient(to right, #447C2A , #3DB444, #447C2A);
 }
